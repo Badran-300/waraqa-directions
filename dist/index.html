@@ -1,40 +1,9 @@
 <!doctype html>
-<html lang="ar" dir="rtl">
-<head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>ورقة — استكشاف الشخصية</title>
-<meta name="description" content="٤٠ اتجاهًا لشخصية ورقة، و٣٠ شخصية جديدة لبوابة الموظفين.">
-<meta name="theme-color" content="#0b4332">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%2300a976' d='M20 85C-5 40 45 6 87 8 92 55 65 95 20 85Z'/%3E%3Cpath stroke='%230b4332' stroke-width='5' d='M21 84 74 24'/%3E%3C/svg%3E">
-<link rel="stylesheet" href="style.css"><link rel="stylesheet" href="arabic.css">
-</head>
+<html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ورقة — عرض الشخصيات</title><meta name="description" content="عرض يضم ٤٠ اتجاهًا لورقة و٣٠ شخصية جديدة. شريحة مستقلة لكل اتجاه."><meta name="theme-color" content="#0b4332"><link rel="icon" href="data:,"><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="arabic.css"><link rel="stylesheet" href="presentation.css"></head>
 <body>
-<header class="appbar">
-  <a class="wordmark" href="#cover" aria-label="بداية العرض">ورقة<span class="wordmark-dot">●</span><small>استكشاف الشخصية</small></a>
-  <nav aria-label="أدوات العرض">
-    <button id="overviewButton" title="كل الاتجاهات">كل الاتجاهات</button>
-    <button id="savedButton" aria-label="فتح المفضلة">المفضلة <span id="savedCount">0</span></button>
-    <button id="fullscreenButton" title="ملء الشاشة" aria-label="ملء الشاشة">⛶</button>
-    <a class="download" href="Waraqa-Directions.pdf" download>نسخة PDF</a>
-    <a class="download" href="Waraqa-Directions.pptx" download>نسخة العرض</a>
-  </nav>
-</header>
-<main id="viewport" tabindex="-1"><div id="stage"></div></main>
-<footer class="toolbar">
-  <button id="prevButton" aria-label="الشريحة السابقة">→</button>
-  <div id="position" aria-live="polite"></div>
-  <div id="chapterNav" aria-label="اختيار المجموعة"></div>
-  <button id="starButton" aria-label="حفظ الاتجاه في المفضلة" aria-pressed="false">☆ <span>حفظ الاتجاه</span></button>
-  <button id="nextButton" aria-label="الشريحة التالية">←</button>
-</footer>
-<div id="progressTrack"><div id="progressBar"></div></div>
-<dialog id="catalog" aria-labelledby="catalogTitle">
- <div class="catalog-header"><div><p class="eyebrow">المجموعة الكاملة</p><h2 id="catalogTitle">كل الاتجاهات</h2></div><button id="closeCatalog" class="close" aria-label="إغلاق القائمة">×</button></div>
- <div class="catalog-tools"><div id="filters"></div><input id="search" type="search" placeholder="ابحث عن اتجاه…" aria-label="البحث في الاتجاهات"></div>
- <div id="gallery" class="gallery"></div>
- <div class="catalog-bottom"><p id="galleryCount"></p><button id="compareButton" disabled>قارن المحدد <span id="compareCount">0</span></button></div>
-</dialog>
-<dialog id="comparison" aria-labelledby="compareTitle"><div class="catalog-header"><div><p class="eyebrow">جنبًا إلى جنب</p><h2 id="compareTitle">قارن الاتجاهات</h2></div><button id="closeComparison" class="close" aria-label="إغلاق المقارنة">×</button></div><div id="compareGrid"></div></dialog>
-<div id="toast" role="status"></div>
-<script src="data.js"></script><script src="app.js"></script>
-</body></html>
+<aside id="indexRail" aria-label="فهرس العرض"><div class="index-heading"><div><h2>فهرس العرض</h2><p>٧٠ اتجاهًا للشخصية</p></div><button id="closeIndex" aria-label="إغلاق الفهرس">×</button></div><nav id="slideIndex" aria-label="الشرائح"></nav></aside>
+<button id="indexBackdrop" aria-label="إغلاق الفهرس" tabindex="-1"></button>
+<div id="presentation" class="presentation-shell"><header class="presentation-header"><a href="#cover" aria-label="الغلاف">ورقة<span>عرض الشخصيات</span></a><button id="indexButton" aria-expanded="false" aria-controls="indexRail">☰ <span>فهرس العرض</span></button></header>
+<main id="viewport" tabindex="-1" aria-label="الشريحة الحالية"><div id="stage"></div></main>
+<footer class="slide-controls"><button id="prevButton" aria-label="الشريحة السابقة"><span>→</span> السابق</button><span id="position" aria-live="polite"></span><button id="nextButton" aria-label="الشريحة التالية">التالي <span>←</span></button></footer></div>
+<script src="data.js"></script><script src="app.js"></script></body></html>
